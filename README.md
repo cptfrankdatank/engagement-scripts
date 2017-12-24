@@ -7,6 +7,7 @@
 git clone https://github.com/dostoevskylabs/engagement-scripts.git && cd engagement-scripts
 chmod +x env.sh
 ./env.sh
+> YourProject
 ```
 
 #### Phase 1
