@@ -19,6 +19,8 @@ cd YourProject/Phase-1/
 vi targets 
 # Run your nmap campaign
 ./xxx-master.sh
+# Viewing Results
+grep --color -r --after-context 100 "Nmap scan report for" nmap-results
 ```
 
 #### Phase 2
@@ -28,5 +30,7 @@ cd YourProject/Phase-2/
 vi domains
 # Run your gobuster campaign
 ./gbc.sh -w path/to/wordlist -t threadcount
+# Viewing Results
+grep -rw --color "(Status:" gobuster-results
 ```
 
