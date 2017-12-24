@@ -1,7 +1,7 @@
 # engagement-scripts
 ###### Dependencies: nmap, gobuster
 
-###### env.sh - setup an environment and pre-define nmap scans (stolen from @sullbrix)
+###### env.sh - setup an environment and pre-define nmap scans (stolen from [@sullbrix](https://github.com/sullbrix/engagement-tools/blob/master/EH_Setup.sh))
 ###### gbc.sh - setup gobuster scans to launch multiple campaigns and observe the results
 
 #### Setup
