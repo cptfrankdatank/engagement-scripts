@@ -10,6 +10,8 @@ mkdir $name/Phase-2
 mkdir $name/Phase-1/results
 touch $name/Phase-1/nohup.out
 
+curl -o $name/Phase-2/gbc.sh https://raw.githubusercontent.com/dostoevskylabs/engagement-scripts/master/gbc.sh
+
 echo "nmap -vv -sF -Pn -iL ../targets -oN results/nmap-F" > $name/Phase-1/xxx-nmapF
 echo "nmap -vv -sn --open -iL ../targets -oN results/pingsNmap" > $name/Phase-1/xxx-nmapP
 echo "nmap -vv -sT -Pn -p 1025-65535 -iL ../targets -oN results/nmap-T-full" > $name/Phase-1/xxx-nmapTfull
