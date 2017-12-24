@@ -18,7 +18,7 @@ mkdir $name/Phase-2
 mkdir $name/Phase-2/gobuster-results
 touch $name/Phase-2/domains
 
-curl -o $name/Phase-2/gbc.sh https://raw.githubusercontent.com/dostoevskylabs/engagement-scripts/master/gbc.sh 2>/dev/null
+curl -o $name/Phase-2/gbc.sh https://raw.githubusercontent.com/dostoevskylabs/engagement-scripts/master/tools/gbc.sh 2>/dev/null
 chmod +x $name/Phase-2/gbc.sh
 
 echo "nmap -vv -sF -Pn -iL targets -oN nmap-results/nmap-F" > $name/Phase-1/xxx-nmapF
