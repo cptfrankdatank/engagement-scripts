@@ -3,8 +3,7 @@
 ###### gbc.sh - setup gobuster scans to launch multiple campaigns and observe the results
 
 #### Setup
-###### Requires:
-> NMAP, GoBuster
+###### Dependencies: nmap, gobuster
 ```bash
 git clone https://github.com/dostoevskylabs/engagement-scripts.git && cd engagement-scripts
 chmod +x env.sh
