@@ -2,8 +2,9 @@
 ###### env.sh - setup an environment and pre-define nmap scans (stolen from @sullbrix)
 ###### gbc.sh - setup gobuster scans to launch multiple campaigns and observe the results
 
-#### Setup
 ###### Dependencies: nmap, gobuster
+
+#### Setup
 ```bash
 git clone https://github.com/dostoevskylabs/engagement-scripts.git && cd engagement-scripts
 chmod +x env.sh
