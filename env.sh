@@ -3,6 +3,7 @@
 echo ""
 echo "What is the project name for the output files?"
 read name
+echo ""
 
 if [ -d "$name" ]; then
   echo "Project exists, choose a different name"
@@ -12,7 +13,10 @@ fi
 mkdir $name
 mkdir $name/Phase-1
 mkdir $name/Phase-1/nmap-results
+touch $name/Phase-1/targets
 mkdir $name/Phase-2
+mkdir $name/Phase-2/gobuster-results
+touch $name/Phase-2/domains
 
 curl -o $name/Phase-2/gbc.sh https://raw.githubusercontent.com/dostoevskylabs/engagement-scripts/master/gbc.sh 2>/dev/null
 chmod +x $name/Phase-2/gbc.sh
