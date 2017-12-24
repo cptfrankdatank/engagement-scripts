@@ -32,11 +32,9 @@ echo "./xxx-nmapF" >> $name/Phase-1/xxx-master.sh
 echo "./xxx-nmapTpriv" >> $name/Phase-1/xxx-master.sh
 echo "./xxx-nmapUpriv" >> $name/Phase-1/xxx-master.sh
 echo "./xxx-nmapTfull" >> $name/Phase-1/xxx-master.sh
-echo "grep --color -r --after-context 10000 \"Nmap scan report for\" nmap-results" > $name/Phase-1/checkResults
-chmod +x $name/Phase-1/checkResults
 chmod +x $name/Phase-1/xxx-*
 
 echo
-echo "Script completed."
+echo "Environment created for $name"
 echo "Begin Phase-1 by adding targets and running $name/Phase-1/xxx-master.sh"
 echo "Begin Phase-2 by adding domains and running $name/Phase-2/gbc.sh"
