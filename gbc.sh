@@ -49,11 +49,11 @@ echo "Wordlist: $wordlist"
 echo "Threads: $threads"
 echo ""
 for item in $(cat domains) ; do
-        wordlist=$(echo $wordlist | rev | cut -d "/" -f1 | rev);
+        savepath=$(echo $wordlist | rev | cut -d "/" -f1 | rev);
         filename=$(echo $item | cut -d "/" -f3- | tr "/" "-");
-        if [ ! -d "gobuster-results/$wordlist" ]; then
-                mkdir gobuster-results/$wordlist
+        if [ ! -d "gobuster-results/$savepath" ]; then
+                mkdir gobuster-results/$savepath
         fi
-        echo "gobuster-results/$wordlist/$filename"
-        gobuster -w $wordlist -u $item -t $threads > gobuster-results/$wordlist/$filename &
+        echo "gobuster-results/$savepath/$filename"
+        gobuster -w $wordlist -u $item -t $threads > gobuster-results/$savepath/$filename &
 done
