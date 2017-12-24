@@ -5,7 +5,7 @@ echo "What is the project name for the output files?"
 read name
 
 if [ -d "$name" ]; then
-  "Project exists, choose a different name"
+  echo "Project exists, choose a different name"
   exit
 fi
 
