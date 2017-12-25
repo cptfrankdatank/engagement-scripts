@@ -1,9 +1,7 @@
 #!/bin/bash
 echo ""
 echo "Gobuster Controller v0.0.1"
-echo "Killing previous instances of gobuster"
 echo ""
-killall -q gobuster
 while [[ $# -gt 0 ]]
 do
 key="$1"
@@ -13,6 +11,12 @@ case $key in
     wordlist="$2"
     shift # past argument
     shift # past value
+    ;;
+    -k|--kill)
+    echo "Killing previous instances of gobuster"
+    killall -q gobuster
+    shift
+    shift
     ;;
     -t|--threads)
     threads="$2"
