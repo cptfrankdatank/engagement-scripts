@@ -45,7 +45,7 @@ if [ ! -d "gobuster-results" ]; then
 fi
 
 if [ ! -f "domains" ]; then
-        echo "Create a `domains` file with full url(s) seperated by new lines to run your campaigns against"
+        echo "Create a domains file with full url(s) seperated by new lines to run your campaigns against"
         exit
 fi
 
