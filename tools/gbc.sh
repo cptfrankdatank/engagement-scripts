@@ -15,6 +15,7 @@ case $key in
     -k|--kill)
     echo "Killing previous instances of gobuster"
     killall -q gobuster
+    exit
     shift
     shift
     ;;
