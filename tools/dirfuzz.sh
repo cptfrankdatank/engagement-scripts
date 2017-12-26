@@ -40,10 +40,6 @@ if [ ! -f "$wordlist" ]; then
         exit
 fi
 
-if [ ! -d "gobuster-results" ]; then
-        mkdir gobuster-results
-fi
-
 if [ ! -f "domains" ]; then
         echo "Create a domains file with full url(s) seperated by new lines to run your campaigns against"
         exit
