@@ -11,17 +11,20 @@
 ```
 -> run init script
   -> name project
-  -> define scope
     -> builds dir structure for your environment
+    -> copies scripts from tools/ to the phase directories
+    -> generates nmap scans that are copied to phase-1
   -> Phase-1
-    -> uses the scope provided, additionally you can add more hostnames to increase your scope here
-    -> Generates nmap scans to run in Phase-1
-      -> Results save in a unified manner in ProjectName/results/nmap/hostname
+    -> define scope by adding ip/hostname(s) separated by a newline to the targets file
+    -> run nmap scans by executing ./xxx-master.sh
+      -> Results save in a unified manner in ProjectName/results/nmap/scantype
+      -> run ./parse-nmap.sh to view results
   -> Phase-2
-    -> define domains
-    -> Generates gobuster campaigns to run in Phase-2
+    -> define domains by adding url(s) separated by a newline to the domains file
+    -> generates gobuster campaigns for each domain supplied
       -> Results save in a unified manner in ProjectName/results/dirfuzz/webaddress/wordlist
-  -> Parse Results
+      -> run ./parse-dirfuzz.sh to view results
+  -> Parsing Results
     -> Ability to get an overview of all findings
     -> Fine tune by sorting options
     -> Fine tune by selecting only X IP address, or X web address, etc
@@ -29,32 +32,33 @@
 
 #### Setup
 ```bash
-git clone https://github.com/dostoevskylabs/engagement-scripts.git && cd engagement-scripts
-chmod +x env.sh
-# Add targets (IP addresses or hostnames separated by newlines)
-vi targets
+# clone this repo
+git clone https://github.com/dostoevskylabs/engagement-scripts.git && cd engagement-scripts && chmod +x env.sh
 # init your environment
 ./env.sh
+# name your project
 > YourProject
 ```
 
 #### Phase 1
 ```bash
-cd YourProject/$target/Phase-1/
+cd YourProject/Phase-1/
+# Add targets (hostnames or IP addresses separated by a newline)
+vi targets
 # Run your nmap campaign
 ./xxx-master.sh
 # Viewing Results
-cd YourProject/results && ./parse-nmap.sh
+cd ../results && ./parse-nmap.sh
 ```
 
 #### Phase 2
 ```bash
-cd YourProject/$target/Phase-2/
-# Add domains (full URLs to the directory you wish to dirbust)
+cd YourProject/Phase-2/
+# Add domains (full URLs to the directory you wish to dirbust separated by a newline)
 vi domains
 # Run your dirfuzz campaign
 ./dirfuzz.sh -w path/to/wordlist -t threadcount
 # Viewing Results
-cd YourProject/results && ./parse-dirfuzz.sh
+cd ../results && ./parse-dirfuzz.sh
 ```
 
