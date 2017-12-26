@@ -1,6 +1,6 @@
 #!/bin/bash
 echo ""
-echo "Gobuster Controller v0.0.1"
+echo "DirFuzz"
 echo ""
 while [[ $# -gt 0 ]]
 do
@@ -13,7 +13,7 @@ case $key in
     shift # past value
     ;;
     -k|--kill)
-    echo "Killing previous instances of gobuster"
+    echo "Killed previously running instances of GoBuster"
     killall -q gobuster
     exit
     shift
@@ -54,11 +54,11 @@ echo "Wordlist: $wordlist"
 echo "Threads: $threads"
 echo ""
 for item in $(cat domains) ; do
-        savepath=$(echo $wordlist | rev | cut -d "/" -f1 | rev);
-        filename=$(echo $item | cut -d "/" -f3- | tr "/" "-");
-        if [ ! -d "gobuster-results/$savepath" ]; then
-                mkdir gobuster-results/$savepath
+        filename=$(echo $wordlist | rev | cut -d "/" -f1 | rev);
+        savepath=$(echo $item | cut -d "/" -f3- | tr "/" "-");
+        if [ ! -d "../../results/dirfuzz/$savepath" ]; then
+                mkdir ../../results/dirfuzz/$savepath
         fi
-        echo "gobuster-results/$savepath/$filename"
-        gobuster -w $wordlist -u $item -t $threads > gobuster-results/$savepath/$filename &
+        echo "../../results/dirfuzz/$savepath/$filename"
+        gobuster -w $wordlist -u $item -t $threads > ../../results/dirfuzz/$savepath/$filename &
 done
