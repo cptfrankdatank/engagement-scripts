@@ -1,1 +1,1 @@
-egrep -v "^#|Status: Up" * | awk '{print "\n-----------------------------\nHost: "$2"\n-----------------------------"; NF-1; for(i=5; i<=NF; i++) { a=a" "$i; }; split(a,s,","); for(e in s) { split(s[e],v,"/"); printf "%-8s %s/%-7s %s\n" , v[2], v[3], v[1], v[5]}; a="" }'
+egrep -v "^#|Status: Up" nmap/* | awk '{print "\n-----------------------------\nHost: "$2"\n-----------------------------"; NF-1; for(i=5; i<=NF; i++) { a=a" "$i; }; split(a,s,","); for(e in s) { split(s[e],v,"/"); printf "%-8s %s/%-7s %s\n" , v[2], v[3], v[1], v[5]}; a="" }'
