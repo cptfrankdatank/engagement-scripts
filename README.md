@@ -2,7 +2,9 @@
 ###### Dependencies: nmap, gobuster
 
 ###### env.sh - setup an environment and pre-define nmap scans (stolen from [@sullbrix](https://github.com/sullbrix/engagement-tools/blob/master/EH_Setup.sh))
-###### gbc.sh - setup gobuster scans to launch multiple campaigns and observe the results
+###### tools/dirfuzz.sh - setup gobuster scans to launch multiple campaigns and observe the results
+###### tools/parse-nmap.sh - parse nmap results
+###### tools/parse-dirfuzz.sh - parse dirfuzz results
 
 #### TODO
 1.  Currently there are a lot of limitations as it is in proof of concept stages. For example you can't call scripts outside of the directory they are in as there are hardcoded file paths being used. This is a stupid limitation that I'm too lazy to sort out currently.
