@@ -49,7 +49,7 @@ cd YourProject/results && ./parse-nmap.sh
 
 #### Phase 2
 ```bash
-cd YourProject/Phase-2/
+cd YourProject/$target/Phase-2/
 # Add domains (full URLs to the directory you wish to dirbust)
 vi domains
 # Run your dirfuzz campaign
