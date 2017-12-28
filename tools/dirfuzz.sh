@@ -52,9 +52,9 @@ echo ""
 for item in $(cat domains); do
         filename=$(echo $wordlist | rev | cut -d "/" -f1 | rev);
         savepath=$(echo $item | cut -d "/" -f3- | tr "/" "-");
-        if [ ! -d "../results/dirfuzz/$savepath" ]; then
-                mkdir ../results/dirfuzz/$savepath
+        if [ ! -d "../../results/dirfuzz/$savepath" ]; then
+                mkdir ../../results/dirfuzz/$savepath
         fi
-        echo "../results/dirfuzz/$savepath/$filename"
-        gobuster -w $wordlist -u $item -t $threads > ../results/dirfuzz/$savepath/$filename &
+        echo "../../results/dirfuzz/$savepath/$filename"
+        gobuster -w $wordlist -u $item -t $threads > ../../results/dirfuzz/$savepath/$filename &
 done
