@@ -10,6 +10,8 @@ if [ -d "$name" ]; then
   exit
 fi
 
+mkdir $name
+
 mkdir $name/results
 mkdir $name/results/nmap
 mkdir $name/results/dirsearch
