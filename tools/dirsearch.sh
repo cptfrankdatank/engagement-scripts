@@ -1,4 +1,4 @@
-if ! [ -x "$(dirsearch)" ]; then
+if [ ! -x "/usr/bin/dirsearch" ]; then
   echo "dirsearch not found in /usr/bin" >&2
   exit
 fi
