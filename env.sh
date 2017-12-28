@@ -34,7 +34,7 @@ mkdir $name/Phase-2/exploits
 mkdir $name/Phase-2/http-reqres
 
 mkdir $name/Phase-3
-mkdir $name/Phase-3/shell
+mkdir $name/Phase-3/shells
 mkdir $name/Phase-3/privesc
 
 touch $name/Phase-1/nmap/targets
