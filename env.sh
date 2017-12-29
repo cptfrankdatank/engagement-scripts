@@ -34,8 +34,13 @@ mkdir $name/Phase-2/exploits
 mkdir $name/Phase-2/http-reqres
 
 mkdir $name/Phase-3
+
 mkdir $name/Phase-3/shells
+cp tools/tcpReverseShell.py $name/Phase-3/shells/tcpReverseShell.py
+cp tools/udpReverseShell.py $name/Phase-3/shells/udpReverseShell.py
+
 mkdir $name/Phase-3/privesc
+cp tools/linuxprivchecker.py $name/Phase-3/privesc/linuxprivchecker.py
 
 touch $name/Phase-1/nmap/targets
 touch $name/Phase-1/dirbust/domains
