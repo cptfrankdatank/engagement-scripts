@@ -39,7 +39,7 @@ mkdir $name/Phase-3
 mkdir $name/Phase-3/shells
 cp tools/tcpReverseShell.py $name/Phase-3/shells/tcpReverseShell.py
 cp tools/udpReverseShell.py $name/Phase-3/shells/udpReverseShell.py
-echo "socat file:`tty`,echo=0,raw udp-listen:443" > $name/Phase-3/socatListener.sh
+echo "socat file:\`tty\`,echo=0,raw udp-listen:443" > $name/Phase-3/socatListener.sh
 echo "python -m SimpleHTTPServer" > $name/Phase-3/httpServer.sh
 chmod +x $name/Phase-3/*.sh
 
