@@ -6,6 +6,7 @@
 /etc/apache2/apache2.conf
 /usr/local/etc/apache22/httpd.conf
 /etc/my.conf
+/etc/knockd.conf
 /etc/squid/squid.conf
 /etc/squid3/squid3.conf
 /etc/httpd/conf/httpd.conf
