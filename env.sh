@@ -1,5 +1,6 @@
 #!/bin/bash
 # slightly tweaked from @sullbrix (https://github.com/sullbrix/engagement-tools/blob/master/EH_Setup.sh)
+# for a in $(cat unique.txt);do whois $a | grep OrgName | cut -d: -f2 | awk '{$1=$1};1' | xargs echo $a',';done
 echo ""
 echo "What is the project name for the output files?"
 read name
